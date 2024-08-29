@@ -2,16 +2,24 @@ import Header from "./component/Header"
 import Hero from "./component/Hero"
 import Skill from "./component/Skill"
 import "./App.css"
+import Project from "./component/Project"
+import About from "./component/About"
+import Line from "./component/Line"
+import Footer from "./component/Footer"
 
-type Props = {}
 
-function App({ }: Props) {
+function App() {
     return (
-        <div className="flex justify-center w-full h-full bg-[#020e16] overflow-y-auto">
+        <div className="flex justify-center w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat overflow-y-auto overflow-x-hidden md:px-3">
             <Header />
-            <div className="flex flex-col gap-14 w-[55rem] h-max pt-[7rem]">
+            <div className="flex flex-col gap-14 w-[55rem] h-max pt-[7rem] text-neutral-300">
                 <Hero />
-                <Skill/>
+                <Line/>
+                <Skill />
+                <Project />
+                <Line/>
+                <About/>
+                <Footer/>
             </div>
         </div>
     )

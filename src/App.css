@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .spin{
@@ -18,7 +19,8 @@
 }
 
 .blob {
-  animation: moov 10s infinite linear;
+  animation: moov 10s infinite linear forwards;
+  transition: all 2s;
 }
 
 @keyframes moov {
@@ -39,5 +41,30 @@
 
   80% {
       border-radius: 60% 31% 60% 34% / 21% 30% 70% 79%;
+  }
+}
+
+.pro:hover .pro1{
+  transform: translateY(-50%) translateX(-70%) rotate(360deg);
+}
+
+.pro:hover .pro2{
+  transform: translateY(120%) translateX(25%) rotate(360deg);
+}
+
+.pro:hover .pro3{
+  transform: translateY(-70%) translateX(50%) rotate(360deg);
+}
+
+.line{
+  animation: line 13s linear infinite;
+}
+
+@keyframes line {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(100%);
   }
 }
