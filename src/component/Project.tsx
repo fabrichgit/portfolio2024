@@ -41,7 +41,7 @@ function Flow() {
                         <div className="flex flex-col gap-2">
                             <a href="https://github.com/Foodie-fabrich" target="_blank" className="flex items-center gap-2 font-mono text-xl w-max">
                                 <span className="text-cyan-500">2.</span>
-                                <span className="underline"></span>
+                                <span className="underline">Foodie</span>
                                 <span className="text-sm">🔗</span>
                             </a>
                             <p>
