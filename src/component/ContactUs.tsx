@@ -14,12 +14,11 @@ export default function ContactUs() {
             })
             .then(
                 () => {
-                    toast.success("send !")
+                    toast.success("send !");
                     (e.target as EventTarget & HTMLFormElement).reset()
                 },
-                (err: any) => {
-                    toast.error(err.message)
-                    console.log(err.message);
+                () => {
+                    toast.error("failed !");
                     (e.target as EventTarget & HTMLFormElement).reset()
                 },
             );

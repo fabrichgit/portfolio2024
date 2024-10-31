@@ -28,20 +28,20 @@ function Flow() {
                         </div>
 
                         <div className="flex flex-col gap-2">
-                            <a href="https://github.com/Ecommunity-fabrich" target="_blank" className="flex items-center gap-2 font-mono text-xl w-max">
+                            <a href="https://github.com/fabrichgit/rudi" target="_blank" className="flex items-center gap-2 font-mono text-xl w-max">
                                 <span className="text-cyan-500">1.</span>
-                                <span className="underline">E-community</span>
+                                <span className="underline">Rudi</span>
                                 <span className="text-sm">🔗</span>
                             </a>
                             <p>
-                                <span className="mr-2">💼</span>Plateform for enterprise to find client for them product and client for project.
+                                <span className="mr-2">🌐</span>Plateform as a service, to track a shared link or your website, <br /> to see how many click and visite 
                             </p>
                         </div>
 
                         <div className="flex flex-col gap-2">
                             <a href="https://github.com/Foodie-fabrich" target="_blank" className="flex items-center gap-2 font-mono text-xl w-max">
                                 <span className="text-cyan-500">2.</span>
-                                <span className="underline">Foodie</span>
+                                <span className="underline"></span>
                                 <span className="text-sm">🔗</span>
                             </a>
                             <p>
