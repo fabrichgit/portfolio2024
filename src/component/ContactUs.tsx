@@ -1,5 +1,6 @@
 import React, { LegacyRef, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 export default function ContactUs() {
     const form = useRef();
@@ -13,10 +14,12 @@ export default function ContactUs() {
             })
             .then(
                 () => {
+                    toast.success("send !")
                     (e.target as EventTarget & HTMLFormElement).reset()
                 },
-                (_error) => {
-                    console.log('FAILED...');
+                (err: any) => {
+                    toast.error(err.message)
+                    console.log(err.message);
                     (e.target as EventTarget & HTMLFormElement).reset()
                 },
             );
