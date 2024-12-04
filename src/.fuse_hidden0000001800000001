@@ -9,6 +9,7 @@ import Footer from "./component/Footer"
 import {Toaster} from "react-hot-toast"
 import { useEffect, useState } from "react"
 import LoadingGlobal from "./component/LoadingGlobal"
+import SlowConnectionWarning from "./component/SlowConnectionWarning"
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
 
     return (
         <>
+        <SlowConnectionWarning/>
         {!isPageReady ? (
           // Affiche l'écran de chargement si la page n'est pas encore prête
           <LoadingGlobal />
