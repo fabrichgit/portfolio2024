@@ -5,8 +5,7 @@ import ContactUs from "./ContactUs"
 function Footer() {
     return (
         <div className="flex flex-col gap-6 items-center w-full py-8">
-            <div className="flex flex-col items-center w-full">
-                <h1 className="italic text-3xl w-full text-center text-shadow">Contact me</h1>
+            <div className="flex flex-col items-center w-full mb-4">
                 <ContactUs />
             </div>
             <div className="flex gap-7">
