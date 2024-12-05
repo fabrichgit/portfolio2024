@@ -7,35 +7,11 @@ import About from "./component/About"
 import Line from "./component/Line"
 import Footer from "./component/Footer"
 import {Toaster} from "react-hot-toast"
-import { useEffect, useState } from "react"
-import LoadingGlobal from "./component/LoadingGlobal"
 
 function App() {
 
-    const [isPageReady, setIsPageReady] = useState(false);
-
-    useEffect(() => {
-      const handlePageLoad = () => {
-        setIsPageReady(true); // Tout est chargé
-      };
-  
-      // Attendre que la page soit complètement chargée
-      window.addEventListener("load", handlePageLoad);
-  
-      // Nettoyage
-      return () => {
-        window.removeEventListener("load", handlePageLoad);
-      };
-    }, []);
-
     return (
-        <>
-        {!isPageReady ? (
-          // Affiche l'écran de chargement si la page n'est pas encore prête
-          <LoadingGlobal />
-        ) : (
-          // Le contenu principal de l'application une fois la page chargée
-          <div className="flex justify-center w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat overflow-y-auto overflow-x-hidden md:px-3">
+        <div className="flex justify-center w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat overflow-y-auto overflow-x-hidden md:px-3">
                 <Toaster/>
                 {/* <!-- Background decorative elements --> */}
                 <div className="fixed inset-0 pattern-dots opacity-30 pointer-events-none"></div>
@@ -54,8 +30,6 @@ function App() {
                     <Footer/>
                 </div>
         </div>
-        )}
-      </>
     )
 }
 
