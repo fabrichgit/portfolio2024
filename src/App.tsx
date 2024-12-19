@@ -7,13 +7,27 @@ import About from "./component/About"
 import Line from "./component/Line"
 import Footer from "./component/Footer"
 import {Toaster} from "react-hot-toast"
+import AnimatedCursor from "react-animated-cursor"
 
 function App() {
 
     return (
         <div className="flex justify-center w-full h-full bg-[url('/bg.png')] bg-cover bg-center bg-no-repeat overflow-y-auto overflow-x-hidden md:px-3">
                 <Toaster/>
-                {/* <!-- Background decorative elements --> */}
+                <AnimatedCursor
+                    innerSize={8}
+                    outerSize={35}
+                    innerScale={1}
+                    outerScale={2}
+                    outerAlpha={0}
+                    innerStyle={{
+                        backgroundColor: '#3f83f8'
+                    }}
+                    outerStyle={{
+                        border: '3px solid #3f83f8'
+                    }}
+                    />
+                {/* <!-- Backgroun1d decorative elements --> */}
                 <div className="fixed inset-0 pattern-dots opacity-30 pointer-events-none"></div>
                 <div className="fixed inset-0 pattern-grid opacity-20 pointer-events-none"></div>
                 {/* <!-- Animated circles --> */}
