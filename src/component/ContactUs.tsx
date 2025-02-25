@@ -8,20 +8,27 @@ export default function ContactUs() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_erxgbwh", "template_zqmjxft", form.current!, {
-        publicKey: "C-5EKvRey2-TwNGR2",
-      })
-      .then(
-        () => {
-          toast.success("send !");
-          (e.target as EventTarget & HTMLFormElement).reset();
-        },
-        () => {
-          toast.error("failed !");
-          (e.target as EventTarget & HTMLFormElement).reset();
-        }
-      );
+   // Récupérer les données du formulaire
+  const formData = new FormData(e.target as HTMLFormElement);
+  const formObject: { [key: string]: string } = {};
+  formData.forEach((value, key) => {
+    formObject[key] = value as string;
+  });
+
+  // Ajouter des valeurs hors formulaire
+  formObject["app_name"] = "Portfolio";
+
+  emailjs
+    .send("service_erxgbwh", "template_zqmjxft", formObject, "C-5EKvRey2-TwNGR2")
+    .then(
+      () => {
+        toast.success("Email envoyé !");
+        (e.target as EventTarget & HTMLFormElement).reset();
+      },
+      () => {
+        toast.error("Échec de l'envoi !");
+      }
+    );
   };
 
   return (
